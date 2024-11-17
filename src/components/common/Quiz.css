@@ -1,0 +1,113 @@
+.quiz-page {
+    height: 90%;
+    overflow-y: auto;
+    background: #FFF5E0; /* Solid background instead of gradient */
+    padding-bottom: 50px; /* Remove space for bottom nav */
+}
+
+.content {
+    padding: 0 20px;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.article-text {
+    color: #333;
+    margin-bottom: 20px; /* Space between paragraphs */
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Update quiz button to stay on screen while scrolling */
+.quiz-button {
+    position: fixed; /* Changed back to fixed */
+    top: 50%;
+    right: calc((100% - 390px) / 2 - 25px); /* Calculate position relative to centered container */
+    transform: translateY(-50%) rotate(-90deg);
+    background-color: #8B7EF8;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Update quiz panel styling */
+.quiz-panel {
+    position: absolute; /* Changed from fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFB5B5; /* Changed to match design */
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quiz-panel.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white; /* Changed to match design */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.timer {
+    color: white; /* Changed to match design */
+}
+
+.question {
+    color: white; /* Changed to match design */
+    font-size: 24px; /* Increased for emphasis */
+    margin: 40px 0;
+    text-align: left;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto; /* Push to bottom */
+}
+
+.answer {
+    background: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: #8B7EF8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.answer:hover:not(:disabled) {
+    background: #f5f5f5;
+}
