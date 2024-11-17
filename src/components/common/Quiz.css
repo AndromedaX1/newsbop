@@ -74,17 +74,19 @@
     background: none;
     border: none;
     color: white; /* Changed to match design */
-    font-size: 20px;
+    font-size: 32px;
     cursor: pointer;
 }
 
 .timer {
     color: white; /* Changed to match design */
+    font-size: 32px;
 }
 
 .question {
     color: white; /* Changed to match design */
-    font-size: 24px; /* Increased for emphasis */
+    font-size: 32px; /* Increased for emphasis */
+    font-weight: bold;
     margin: 40px 0;
     text-align: left;
 }
@@ -101,8 +103,8 @@
     border: none;
     padding: 15px;
     border-radius: 10px;
-    color: #8B7EF8;
-    font-size: 16px;
+    color: black;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: left;
@@ -111,3 +113,52 @@
 .answer:hover:not(:disabled) {
     background: #f5f5f5;
 }
+
+/* Add to Quiz.css */
+.result-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .result-message.visible {
+    opacity: 1;
+  }
+  
+  .result-message.correct {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .result-message.wrong {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .answer.correct {
+    background-color: #4CAF50 !important;
+    color: white !important;
+  }
+  
+  .answer.wrong {
+    background-color: #f44336 !important;
+    color: white !important;
+  }
+  
+  .answer.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind components;

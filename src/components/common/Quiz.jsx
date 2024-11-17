@@ -20,6 +20,7 @@ const Quiz = ({
   const [timeLeft, setTimeLeft] = useState(20);
   const [showResult, setShowResult] = useState(false);
   const [resultMessage, setResultMessage] = useState('');
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   useEffect(() => {
     let timer;
@@ -42,7 +43,9 @@ const Quiz = ({
     }, 2000);
   };
 
-  const handleAnswer = (isCorrect) => {
+  const handleAnswer = (index) => {
+    setSelectedAnswer(index);
+    const isCorrect = index === correctAnswerIndex;
     updateCategoryStreak(category, isCorrect);
     setResultMessage(isCorrect ? 'Correct! 🎉' : 'Wrong Answer 😢');
     setShowResult(true);
@@ -60,6 +63,7 @@ const Quiz = ({
 
   const hideQuiz = () => {
     setShowQuiz(false);
+    setSelectedAnswer(null);
     navigate('/');
   };
 
@@ -100,20 +104,26 @@ const Quiz = ({
         <div className="question">Q: {question}</div>
         
         {showResult && (
-        <div className="result-message visible">{resultMessage}</div>
+          <div className={`result-message visible ${resultMessage.includes('Correct') ? 'correct' : 'wrong'}`}>
+            {resultMessage}
+          </div>
         )}
-        
+
         <div className="answers">
-        {answers.map((answer, index) => (
+          {answers.map((answer, index) => (
             <button
-            key={index}
-            className="answer"
-            disabled={showResult}
-            onClick={() => handleAnswer(index === correctAnswerIndex)}
+              key={index}
+              className={`answer ${
+                showResult && index === correctAnswerIndex ? 'correct' : ''
+              } ${
+                showResult && selectedAnswer === index && index !== correctAnswerIndex ? 'wrong' : ''
+              } ${showResult ? 'disabled' : ''}`}
+              disabled={showResult}
+              onClick={() => handleAnswer(index)}
             >
-            {answer}
+              {answer}
             </button>
-        ))}
+          ))}
         </div>
     </div>
     </div>

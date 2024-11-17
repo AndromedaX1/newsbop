@@ -13,6 +13,12 @@
     font-size: 45px;
 }
 
+.avatar-image {
+    width: 120%;
+    height: 120%;
+    object-fit: cover; /* This ensures the image covers the space properly */
+}
+
 .user-avatar.small {
     width: 60px;
     height: 60px;

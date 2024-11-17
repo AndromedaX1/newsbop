@@ -3,7 +3,11 @@ import './UserAvatar.css';
 const UserAvatar = ({ size = 'large' }) => {
   return (
     <div className={`user-avatar ${size}`}>
-      <i className="fas fa-user"></i>
+      <img 
+        src="/headshot.png" 
+        alt="User" 
+        className="avatar-image"
+      />
     </div>
   );
 };

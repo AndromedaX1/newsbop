@@ -43,7 +43,7 @@
 
 .leaderboard-entry .username {
     color: #8B7EF8;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     margin: 0;
     text-align: left;
@@ -55,7 +55,7 @@
 .streak {
     color: #8B7EF8;
     opacity: 0.8;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .empty-state {
