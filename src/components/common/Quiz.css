@@ -9,10 +9,29 @@
     padding: 0 20px;
 }
 
+.title {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 50px;
+    color: #9980FF;
+    margin: 20px 0;
+    margin-top: -10px;
+    font-weight: 600;
+}
+
 .article-image {
     width: 100%;
     height: auto;
     margin: 20px 0;
+}
+
+.image-caption{
+    color: #33333391;
+    margin-top: -10px;
+    margin-bottom: 20px; /* Space between paragraphs */
+    line-height: 1.6;
+    font-size: 16px;
+    
 }
 
 .article-text {

@@ -4,7 +4,7 @@ const UserAvatar = ({ size = 'large' }) => {
   return (
     <div className={`user-avatar ${size}`}>
       <img 
-        src="/headshot.png" 
+        src="/avatar2.png" 
         alt="User" 
         className="avatar-image"
       />

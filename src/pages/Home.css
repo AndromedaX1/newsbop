@@ -1,15 +1,18 @@
 .title {
-    font-family: 'GFS Didot', serif;
+    font-family: 'Lora', serif;
     text-align: center;
-    font-size: 48px;
-    color: #8B7EF8;
+    font-size: 65px;
+    color: #9980FF;
     margin: 20px 0;
+    margin-top: -10px;
+    font-weight: 600;
 }
 
 .user-profile {
     display: flex;
     justify-content: center;
     width: 100%;
+    
 }
 
 .user-container {
@@ -20,11 +23,13 @@
 }
 
 .username {
-    color: #8B7EF8;
+    font-family: 'Mukta Malar', sans-serif;
+    color: #9980FF;
     margin-top: 24px;
     text-align: center;
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 35px;
 }
 
 .quick-actions {
@@ -39,16 +44,18 @@
 }
 
 .action-button i {
-    font-size: 80px;
-    color: #8B7EF8;
+    font-size: 65px;
+    color: #9980FF;
 }
 
 .action-label {
-    /* font-family: 'Molengo', sans-serif; */
+    font-family: 'Mukta Malar', sans-serif;
     font-size: 20px;
-    color: #8B7EF8;
+    color: #9980FF;
     text-align: center;
     margin-top: 20px;
+    font-weight: 800;
+    letter-spacing: -1px
   }
 
 .category-grid {
@@ -60,24 +67,31 @@
 }
 
 .category {
-    /* font-family: 'Molengo', sans-serif; */
+    font-family: 'Mukta Malar', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #8B7EF8;
+    color: #9980FF;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .category i {
     font-size: 64px;
     margin-bottom: 5px;
-    color: #FF9999;
+    margin-top: -60px;
+    color: #FF8383;
+    border-radius: 80%; /* Makes the element circular */    
+    box-shadow: 0 13px 10px rgba(124, 30, 247, 0.282); /* Adds a soft shadow */
 }
 
 .streak-counter {
-    /* font-family: 'Molengo', sans-serif; */
-    color: #8B7EF8;
-    font-size: 20px;
-    margin-top: 5px;
+    font-family: 'Mukta Malar', sans-serif;
+    color: #9980FF;
+    font-size: 22px;
+    margin-top: -5px;
+    font-weight: 800;
+    letter-spacing: -1px;
 }

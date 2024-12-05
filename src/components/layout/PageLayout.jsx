@@ -23,9 +23,9 @@ const PageLayout = ({ children, hideBottomNav = false }) => {
   
         {!hideBottomNav && (
           <nav className="bottom-nav">
-            <i className="fas fa-house" onClick={() => navigate('/')}></i>
-            <i className="fas fa-globe" onClick={() => navigate('/quiz/politics')}></i>
             <i className="fa-solid fa-money-check-dollar" onClick={() => navigate('/quiz/finance')}></i>
+            <i className="fas fa-landmark-dome" onClick={() => navigate('/')}></i>
+            <i className="fas fa-earth-americas" onClick={() => navigate('/quiz/politics')}></i>
             <i className="fas fa-guitar" onClick={() => navigate('/quiz/pop')}></i>
             <i className="fas fa-plus"></i>
           </nav>

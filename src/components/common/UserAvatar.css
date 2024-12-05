@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
     color: #8B7EF8;
+    /* border-radius: 100%;  
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);  */
 }
 
 .user-avatar.large {
@@ -14,9 +16,10 @@
 }
 
 .avatar-image {
-    width: 120%;
-    height: 120%;
+    width: 135%;
+    height: 135%;
     object-fit: cover; /* This ensures the image covers the space properly */
+    transform: translateX(-3px);
 }
 
 .user-avatar.small {

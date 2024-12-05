@@ -21,18 +21,18 @@ const Home = () => {
       <div className="user-profile">
         <div className="user-container">
           <UserAvatar size="large" />
-          <div className="username">Fun Username</div>
+          <div className="username">NewsNerd_007</div>
         </div>
       </div>
 
       <div className="quick-actions">
         <a onClick={() => navigate('/leaderboard')} className="action-button">
           <i className="fas fa-medal icon"></i>
-          <div className="action-label">Leaderboard</div>
+          {/* <div className="action-label">Leaderboard</div> */}
         </a>
         <a onClick={() => navigate('/friends')} className="action-button">
           <i className="fas fa-users icon"></i>
-          <div className="action-label">Friends</div>
+          {/* <div className="action-label">Friends</div> */}
         </a>
       </div>
 
